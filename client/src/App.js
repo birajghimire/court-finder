@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
+
 import NavBar from './components/Navbar';
 import Home from './components/Home';
 import LoginSignup from './components/LoginSignup';
@@ -12,15 +18,15 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Switch>
-        <Route path="/" exact Component={Home} />
-        <Route path="/login" component={LoginSignup} />
-        <Route path="/discover" component={Discover} />
-        <Route path="/court/:id" component={CourtDetail} />
-        <Route path="/add-court" component={AddCourt} />
-        <Route path="/add-review/:courtId" component={AddReview} />
-        <Route path="/profile" component={Profile} />
-      </Switch>
+      <Routes>
+        <Route path="/" exact element={<Home/>} />
+        <Route path="/login" element={<LoginSignup/>} />
+        <Route path="/discover" element={<Discover/>} />
+        <Route path="/court/:id" element={<CourtDetail/>} />
+        <Route path="/add-court" element={<AddCourt/>} />
+        <Route path="/add-review/:courtId" element={<AddReview/>} />
+        <Route path="/profile" element={<Profile/>} />
+      </Routes>
     </Router>
     
   );
