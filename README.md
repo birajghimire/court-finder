@@ -1,7 +1,7 @@
 # court-finder
 local basketball court finder
 
-#Development Proccess
+# Development Proccess
 
 #Backend (Express, Node.js, MongoDB):
 Set up a Node.js and Express.js server.
@@ -11,7 +11,7 @@ Implement user authentication and authorization (possibly with JWT or Passport.j
 Create RESTful routes for User, Court, and Review resources (CRUD operations).
 
 
-#Frontend (React):
+# Frontend (React):
 Set up a React application.
 Implement routing (using React Router).
   **Create components:**
@@ -30,17 +30,17 @@ Implement routing (using React Router).
   Add state management for current users.
   Implement protected routes (users can only add a court or review when logged in).
 
-#Styling:
+# Styling:
 Style all components using CSS (you may use a library like Bootstrap or Tailwind CSS for easier styling).
 Make the application responsive to different screen sizes.
 
-#Testing:
+# Testing:
 Test backend routes using a tool like Postman.
 Unit test frontend components (using React Testing Library or similar).
 Perform integration and end-to-end testing.
 Test the application on different devices and browsers.
 
-#Deployment:
+# Deployment:
 Deploy the backend (e.g., Heroku, AWS).
 Deploy the frontend (e.g., Vercel, Netlify).
 Set up a custom domain name.
