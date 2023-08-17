@@ -15,14 +15,19 @@ Through Court Finder, users will not not only be able to discover new places to 
 # Backend (Express, Node.js, MongoDB):
 
 -Set up a Node.js and Express.js server.
+
 -Configure connection to a MongoDB database.
+
 -Create models for User, Court, and Review with appropriate fields.
+
 -Implement user authentication and authorization (possibly with JWT or Passport.js). 
-Create RESTful routes for User, Court, and Review resources (CRUD operations).
+
+-Create RESTful routes for User, Court, and Review resources (CRUD operations).
 
 
 # Frontend (React):
 Set up a React application.
+
 -Implement routing (using React Router).
   **Create components:**
   -Navbar component
