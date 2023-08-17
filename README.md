@@ -3,7 +3,7 @@ local basketball court finder
 
 # Development Proccess
 
-#Backend (Express, Node.js, MongoDB):
+# Backend (Express, Node.js, MongoDB):
 Set up a Node.js and Express.js server.
 Configure connection to a MongoDB database.
 Create models for User, Court, and Review with appropriate fields.
