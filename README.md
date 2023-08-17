@@ -1,7 +1,7 @@
 # court-finder
 local basketball court finder
 
-# Development Proccess
+# Development Process Outline
 
 # Backend (Express, Node.js, MongoDB):
 Set up a Node.js and Express.js server.
