@@ -26,7 +26,8 @@ Through Court Finder, users will not not only be able to discover new places to 
 
 
 # Frontend (React):
-Set up a React application.
+
+- Set up a React application.
 
 -Implement routing (using React Router).
  
