@@ -1,4 +1,4 @@
-# court-finder
+# Court Finder
 
 Court Finder is a user-centric, geolocation-based web application designed to foster a community of basketball enthusiasts. Using the MERN (MongoDB, Express.js, React.js, Node.js) stack, it aims to address the common difficulty of finding and sharing information about local basketball courts.
 
