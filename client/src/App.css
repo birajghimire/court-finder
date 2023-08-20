@@ -5,7 +5,12 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: linear-gradient(79deg, #7439db, #c66fbc 48%, #f7944d);
+  background-image: linear-gradient(79deg, #3a373e, #5f2c59 48%, #da640f);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 .auth-container, .login-form, .register-form{
@@ -38,4 +43,48 @@ button{
   background: none;
   color: white;
   text-decoration: underline;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;  
+  height: 35px;  
+  background-image: linear-gradient(79deg, #3a373e, #5f2c59 48%, #da640f);
+  z-index: 1000;  /* This ensures the navbar stays above other content */
+  color: #ffffff; 
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: black;
+}
+
+button.nav-link {
+  background: black; 
+  border: none;
+  cursor: pointer;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+.home-container {
+  padding: 20px;
+  margin-bottom: 500px;
+}
+
+.discover-container {
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
 }

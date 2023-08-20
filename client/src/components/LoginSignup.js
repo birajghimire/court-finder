@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginSignUp() {
+export default function LoginSignUp({setIsLoggedIn}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -9,8 +9,8 @@ export default function LoginSignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(password);
+    setIsLoggedIn(true);
+    navigate("/home")
   }
 
   const toRegister = () => {
