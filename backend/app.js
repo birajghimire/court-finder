@@ -23,25 +23,23 @@ if (process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
 };
 
-// app.engine('.hbs', engine({defaultLayout: 'main', extname: '.hbs'}));
-// app.set('view engine', '.hbs');
-
-// app.use(session({
-//     secret: 'keyboard cat',
-//     resave: false,
-//     saveUninitialized: false,
-//     store: MongoStore.create({mongoUrl: process.env.MONGO_URI})
-//   }));
-
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-// app.use(express.static(path.join(__dirname, 'public')));
-
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`Running on ${process.env.NODE_ENV} on port ${PORT}`));
+
+
+app.use(cookieParser())
+
+app.use(express.json());
+
+app.use(function(req, res, next) {
+  //IMPORTANT TODO: Change origin to delpoyed host sitename
+  res.header("Access-Control-Allow-Origin", req.header('Origin'));
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 app.use(
   cors({
@@ -51,8 +49,6 @@ app.use(
   })
 );
 
-app.use(cookieParser())
-
-app.use(express.json());
-
 app.use('/auth', require('./routes/auth'));
+
+app.listen(PORT, console.log(`Running on ${process.env.NODE_ENV} on port ${PORT}`));

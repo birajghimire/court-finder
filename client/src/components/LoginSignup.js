@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 
 export default function LoginSignUp({setIsLoggedIn}) {
   const [email, setEmail] = useState('');
@@ -7,10 +8,27 @@ export default function LoginSignUp({setIsLoggedIn}) {
 
   const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    setIsLoggedIn(true);
-    navigate("/home")
+    try {
+      const { data } = await axios.post(
+        "http://localhost:4000/auth/login",
+        {
+          email,
+          password,
+        },
+        { withCredentials: true }
+      );
+      const { success, message } = data;
+      if (success) {
+        setIsLoggedIn(true);
+        navigate("/home");
+      } else {
+        console.log(message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const toRegister = () => {
