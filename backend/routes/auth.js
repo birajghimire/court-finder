@@ -1,21 +1,10 @@
+const { SignUp, Login } = require("../controllers/authcontroller");
+const { userVerify } = require("../middleware/auth");
 const express = require('express');
-const passport = require('passport');
 const router = express.Router();
 
-router.get('/google',
-passport.authenticate('google', { scope: ['profile'] }));
-
-router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/' }),
-    (req, res) => {
-        res.redirect('/');
-    }
-)
-
-router.get('/logout', (req, res, next) => {
-    req.logout((error)=>{
-        if (error) {return next(error)}
-    }); 
-    res.redirect('/')
-})
+router.post('/', userVerify)
+router.post("/signup", SignUp);
+router.post("/login", Login);
 
 module.exports = router;
