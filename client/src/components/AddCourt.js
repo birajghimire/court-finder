@@ -47,11 +47,7 @@ function AddCourt() {
             return;
         }
         try {
-<<<<<<< HEAD
-            const response = await axios.post('http://localhost:3000/court', {
-=======
             const response = await axios.post('http://localhost:4000/court', {
->>>>>>> 6f54e3bb
                 name: name,
                 address: address,
                 latitude: lat,
