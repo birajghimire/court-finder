@@ -3,13 +3,13 @@ const router = express.Router();
 const Court = require('../models/Court');
 
 
-router.get('/court/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     let court = await Court.findById(req.params.id);
     res.send(court);
 });
 
 
-router.post('/court', async (req, res) => {
+router.post('/', async (req, res) => {
     let court = new Court({
         name: req.body.name,
         address: req.body.address,
@@ -21,7 +21,7 @@ router.post('/court', async (req, res) => {
     res.send(court);
 });
 
-router.delete('/court/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     let court = await Court.findByIdandDelete(req.params.id);
     res.send(court);
 });
