@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Court = require('../models/Court');
 
+
 router.get('/court/:id', async (req, res) => {
-    let court = await Court.findbyId(req.params.id);
+    let court = await Court.findById(req.params.id);
     res.send(court);
 });
 
@@ -21,6 +22,9 @@ router.post('/court', async (req, res) => {
 });
 
 router.delete('/court/:id', async (req, res) => {
-    let court = await Court.findbyIdandDelete(req.params.id);
+    let court = await Court.findByIdandDelete(req.params.id);
     res.send(court);
 });
+
+
+module.exports = router;

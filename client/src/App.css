@@ -50,7 +50,7 @@ button{
   top: 0;
   left: 0;
   right: 0;  
-  height: 35px;  
+  height: 60px;  
   background-image: linear-gradient(79deg, #3a373e, #5f2c59 48%, #da640f);
   z-index: 1000;  /* This ensures the navbar stays above other content */
   color: #ffffff; 
@@ -66,11 +66,11 @@ button{
 }
 
 .nav-link:hover {
-  background-color: black;
+  background-color: gray;
 }
 
 button.nav-link {
-  background: black; 
+  background: gray; 
   border: none;
   cursor: pointer;
 }

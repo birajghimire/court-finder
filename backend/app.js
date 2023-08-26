@@ -13,8 +13,6 @@ const cookieParser = require('cookie-parser');
 
 dotenv.config({ path: './config/config.env' });
 
-require('./config/passport')(passport);
-
 connectDB();
 
 const app = express();
@@ -23,10 +21,7 @@ if (process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
 };
 
-
 const PORT = process.env.PORT || 5000;
-
-
 
 app.use(cookieParser())
 
@@ -50,5 +45,6 @@ app.use(
 );
 
 app.use('/auth', require('./routes/auth'));
+app.use('/court', require('./routes/court'));
 
 app.listen(PORT, console.log(`Running on ${process.env.NODE_ENV} on port ${PORT}`));
