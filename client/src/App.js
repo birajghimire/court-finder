@@ -21,7 +21,8 @@ function App() {
           {/* If the user is not logged in, only show the login and register routes */}
           {!isLoggedIn && (
             <>
-              <Route path="/home" exact element={<Home isLoggedIn={isLoggedIn}/>} />
+              <Route path="/" exact element={<Home/>} />
+              <Route path="/home" element={<Home isLoggedIn={isLoggedIn}/>} />
               <Route path="/login" element={<LoginSignup setIsLoggedIn={setIsLoggedIn} />} />
               <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
             </>
