@@ -7,10 +7,32 @@ import AddCourt from './components/AddCourt';
 import AddReview from './components/AddReview';
 import Profile from './components/Profile';
 import Register from './components/Register';
-import { useState } from 'react';
+import { useCookies } from "react-cookie";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [cookies, removeCookie] = useCookies([]);
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    const verifyCookie = async () => {
+      if (!cookies.token) {
+        setIsLoggedIn(false);
+      }
+      const { data } = await axios.post(
+        "http://localhost:4000/auth",
+        {},
+        { withCredentials: true }
+      );
+      const { status, user } = data;
+      setUser(user);
+      setIsLoggedIn(true);
+    };
+    verifyCookie();
+  }, [cookies, removeCookie]);
 
   return (
     <div className="App">
