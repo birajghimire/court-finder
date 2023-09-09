@@ -2,7 +2,7 @@
 
 Court Finder is a user-centric, geolocation-based web application designed to foster a community of basketball enthusiasts. Using the MERN (MongoDB, Express.js, React.js, Node.js) stack, it aims to address the common difficulty of finding and sharing information about local basketball courts.
 
-The application will has two key functions. Firstly, it leverages geolocation data to help users discover nearby basketball courts that may not be widely known or listed elsewhere. This information will be represented in a user-friendly interface, using React.js for a streamlined, intuitive user experience.
+The application will two key functions. Firstly, it leverages geolocation data to help users discover nearby basketball courts that may not be widely known or listed elsewhere. This information will be represented in a user-friendly interface, using React.js for a streamlined, intuitive user experience.
 
 The second key function is its interactive platform. Users are able to add previously unfound local basketball courts to the platform's database, providing a wealth of shared knowledge about available courts and their characteristics. This fosters a sense of community as users collectively contribute to the platform, making it a useful resource for anyone seeking to play basketball locally.
 
